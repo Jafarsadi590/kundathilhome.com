@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundathil Home Construction</title>
+    <style>
+        /* CSS Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            background: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-section {
+            text-align: center;
+            font-size: 35px;
+            margin: 2rem 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 800px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .upload-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            max-height: 800px;
+            overflow-y: auto;
+        }
+
+        .gallery-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background: white;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .adsense-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #fff;
+            text-align: center;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            max-width: 1147px; /* Adjusted width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            max-width: 1147px; /* Adjusted width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .login-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .login-section input {
+            margin-bottom: 1rem;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .pagination button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .password-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .password-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .password-modal input {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Progress Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <div class="hero-section">
+            <h1>Kundathil Home Construction</h1>
+            <img src="Pictures/Home 3d.jpeg" 
+                 alt="Home Construction" 
+                 class="hero-image">
+            <div class="project-details">
+                <h2>Project Details</h2>
+                <p>Start Date: 30th October 2024</p>
+                <p>Expected Completion:31 October 2027</p>
+                <p>Total Area: 2746 sq.ft</p>
+                <p>Engineer: AJAY KR</p>
+                <p>Phone No: +91 9656 530 718</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Section -->
+    <div class="adsense-section container">
+        <h3>Ad Space</h3>
+        <p>AdSense code will be placed here</p>
+    </div>
+
+    <!-- Login Section -->
+    <div id="login" class="login-section container">
+        <h2>Login to Upload Photos</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Gallery & Upload Section -->
+    <section id="gallery" class="container" style="display: none;">
+        <div class="upload-section">
+            <h2>Upload Progress Photos</h2>
+            <form id="uploadForm">
+                <input type="file" id="photoInput" accept="image/*" required>
+                <input type="date" id="photoDate" required>
+                <input type="text" id="uploaderName" placeholder="Your name" required>
+                <button type="submit">Upload Photo</button>
+            </form>
+        </div>
+
+        <h2>Progress Gallery</h2>
+        <div class="gallery" id="photoGallery">
+            <!-- Photos will be added here dynamically -->
+        </div>
+        <div class="pagination" id="pagination">
+            <button id="prevPage" disabled>Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="nextPage" disabled>Next</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <div class="contact-info">
+            <h2>Project Owner Contact Information</h2>
+            <p>Project Owner: JAFAR SADIQUE KUNDATHIL</p>
+            <p>Email: jskmail123@gmail.com</p>
+            <p>Phone: +91 7025 123 590</p>
+            <p>Phone: +965 9791 7325</p>
+
+            <p>Address: Kundathil (h), Velimanna (po), Omassery (via), Kozhikode (dt), Kerala India , PIN-673582</p>
+            <div class="social-links">
+                <h3>Follow Updates</h3>
+                <a href="#">Facebook</a> | 
+                <a href="#">WhatsApp Group</a> | 
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Password Modal -->
+    <div id="passwordModal" class="password-modal">
+        <div class="password-modal-content">
+            <h2>Enter Password to Delete</h2>
+            <input type="password" id="deletePassword" placeholder="Password" required>
+            <button id="confirmDelete">Delete</button>
+            <button id="cancelDelete">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for User Management, Image Upload, and Gallery
+        let photos = JSON.parse(localStorage.getItem('constructionPhotos')) || [];
+        let loggedInUser = null;
+        let currentPage = 1;
+        const photosPerPage = 100;
+        let photoToDelete = null; // Stores the photo to delete after password confirmation
+
+        // Login Functionality
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple user validation (for demo purposes)
+            if (username === "jafar" && password === "1995") {
+                loggedInUser = username;
+                alert('Login successful!');
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('gallery').style.display = 'block';
+                updateGallery();
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+
+        // Image Upload Functionality
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!loggedInUser) {
+                alert('Please login to upload photos.');
+                return;
+            }
+
+            const fileInput = document.getElementById('photoInput');
+            const date = document.getElementById('photoDate').value;
+            const uploader = document.getElementById('uploaderName').value;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const newPhoto = {
+                    image: e.target.result,
+                    date: date,
+                    uploader: uploader,
+                    timestamp: new Date().toISOString()
+                };
+                
+                photos.push(newPhoto);
+                localStorage.setItem('constructionPhotos', JSON.stringify(photos));
+                updateGallery();
+                alert('Photo uploaded successfully!');
+                document.getElementById('uploadForm').reset(); // Reset form for new upload
+            };
+            
+            reader.readAsDataURL(fileInput.files[0]);
+        });
+
+        // Delete Photo Functionality
+        function deletePhoto(timestamp) {
+            photoToDelete = timestamp; // Store the photo to delete
+            document.getElementById('passwordModal').style.display = 'flex'; // Show password modal
+        }
+
+        // Password Modal Functionality
+        document.getElementById('confirmDelete').addEventListener('click', function() {
+            const password = document.getElementById('deletePassword').value;
+
+            // Check if the password is correct
+            if (password === "delete1995") { // Default password for deletion
+                photos = photos.filter(photo => photo.timestamp !== photoToDelete);
+                localStorage.setItem('constructionPhotos', JSON.stringify(photos));
+                updateGallery();
+                alert('Photo deleted successfully!');
+                closePasswordModal();
+            } else {
+                alert('Incorrect password. Deletion failed.');
+            }
+        });
+
+        document.getElementById('cancelDelete').addEventListener('click', function() {
+            closePasswordModal();
+        });
+
+        function closePasswordModal() {
+            document.getElementById('passwordModal').style.display = 'none';
+            document.getElementById('deletePassword').value = ''; // Clear password input
+            photoToDelete = null; // Reset photo to delete
+        }
+
+        // Download Photo Functionality
+        function downloadPhoto(imageSrc, fileName) {
+            const link = document.createElement('a');
+            link.href = imageSrc;
+            link.download = fileName || 'photo.jpg';
+            link.click();
+        }
+
+        // Update Gallery Functionality
+        function updateGallery() {
+            const gallery = document.getElementById('photoGallery');
+            gallery.innerHTML = '';
+            
+            // Sort photos by date
+            photos.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            // Pagination logic
+            const startIndex = (currentPage - 1) * photosPerPage;
+            const endIndex = startIndex + photosPerPage;
+            const paginatedPhotos = photos.slice(startIndex, endIndex);
+
+            paginatedPhotos.forEach(photo => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `
+                    <img src="${photo.image}" alt="Construction progress">
+                    <p>Date: ${photo.date}</p>
+                    <p>Uploaded by: ${photo.uploader}</p>
+                    <button class="delete-btn" onclick="deletePhoto('${photo.timestamp}')">Delete</button>
+                    <button class="download-btn" onclick="downloadPhoto('${photo.image}', '${photo.date}.jpg')">Download</button>
+                `;
+                gallery.appendChild(galleryItem);
+            });
+
+            // Update pagination buttons
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = endIndex >= photos.length;
+            document.getElementById('pageInfo').textContent = `Page ${currentPage}`;
+        }
+
+        // Pagination Event Listeners
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                updateGallery();
+            }
+        });
+
+        document.getElementById('nextPage').addEventListener('click', function() {
+            const totalPages = Math.ceil(photos.length / photosPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                updateGallery();
+            }
+        });
+
+        // Initial gallery load
+        updateGallery();
+
+        // Simple page navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.querySelector(this.getAttribute('href')).style.display = 'block';
+            });
+        });
+
+        // Show home section by default
+        document.querySelector('#home').style.display = 'block';
+    </script>
+</body>
+</html>
